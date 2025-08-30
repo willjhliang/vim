@@ -7,7 +7,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
-    Plug 'arcticicestudio/nord-vim'
+    Plug 'dracula/vim', { 'as': 'dracula' }
+    Plug 'github/copilot.vim'
 call plug#end()
 
 " Basic Settings
@@ -16,7 +17,7 @@ set fileencoding=utf-8
 
 " Appearance
 set number
-colorscheme nord
+colorscheme dracula
 
 " Tabs and Indentation
 set expandtab
@@ -32,6 +33,7 @@ set scrolloff=8
 set sidescrolloff=8
 set clipboard=unnamedplus
 set mouse=a
+vnoremap <silent> y "+y
 
 " Performance
 set lazyredraw
@@ -42,7 +44,8 @@ let mapleader = ","
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 
-" Load plugin-specific settings
+" Load additional settings
 source coc.vim
 source nerdtree.vim
 source fzf.vim
+source media.vim
