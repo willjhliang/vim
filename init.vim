@@ -7,8 +7,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
-    Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'github/copilot.vim'
+    Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " Basic Settings
@@ -17,7 +17,7 @@ set fileencoding=utf-8
 
 " Appearance
 set number
-colorscheme dracula
+colorscheme nord
 
 " Tabs and Indentation
 set expandtab
@@ -45,7 +45,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 
 " Load additional settings
-source coc.vim
-source nerdtree.vim
-source fzf.vim
-source media.vim
+source ~/.vim/coc.vim
+source ~/.vim/nerdtree.vim
+source ~/.vim/fzf.vim
+source ~/.vim/media.vim
