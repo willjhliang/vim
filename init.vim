@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'github/copilot.vim'
-    Plug 'arcticicestudio/nord-vim'
+    Plug 'lervag/vimtex'
 call plug#end()
 
 " Basic Settings
@@ -18,6 +18,7 @@ set fileencoding=utf-8
 " Appearance
 set number
 colorscheme nord
+" highlight Visual ctermfg=NONE
 
 " Tabs and Indentation
 set expandtab

@@ -22,6 +22,6 @@ endfunction
 
 augroup media_viewers
   autocmd!
-  autocmd BufReadPost,FileReadPost *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.svg,*.webp,*.mp4,*.mkv,*.avi,*.mov,*.webm,*.heic
+  autocmd BufReadPost,FileReadPost *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.svg,*.webp,*.mp4,*.mkv,*.avi,*.mov,*.webm,*.heic,*.pdf
         \ call OpenMedia()
 augroup END
