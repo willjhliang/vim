@@ -1,3 +1,10 @@
+" Install vim-plug
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Plugins
 call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-sensible'
@@ -35,6 +42,19 @@ set sidescrolloff=8
 set clipboard=unnamedplus
 set mouse=a
 vnoremap <silent> y "+y
+
+" Navigation
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+augroup fern_ctrl_hjkl
+  autocmd!
+  autocmd FileType fern nnoremap <buffer> <c-h> <c-w>h
+  autocmd FileType fern nnoremap <buffer> <c-j> <c-w>j
+  autocmd FileType fern nnoremap <buffer> <c-k> <c-w>k
+  autocmd FileType fern nnoremap <buffer> <c-l> <c-w>l
+augroup END
 
 " Performance
 set lazyredraw
