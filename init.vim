@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-sensible'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'preservim/nerdtree'
+    Plug 'lambdalisue/vim-fern'
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
@@ -35,7 +35,6 @@ set sidescrolloff=8
 set clipboard=unnamedplus
 set mouse=a
 vnoremap <silent> y "+y
-let NERDTreeShowHidden=1
 
 " Performance
 set lazyredraw
@@ -43,6 +42,6 @@ set ttyfast
 
 " Load additional settings
 source ~/.vim/coc.vim
-source ~/.vim/nerdtree.vim
+source ~/.vim/fern.vim
 source ~/.vim/fzf.vim
 source ~/.vim/media.vim
