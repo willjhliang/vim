@@ -18,7 +18,6 @@ set fileencoding=utf-8
 " Appearance
 set number
 colorscheme nord
-" highlight Visual ctermfg=NONE
 
 " Tabs and Indentation
 set expandtab
@@ -30,20 +29,17 @@ set smartindent
 " Interface / Editing
 set wrap
 set linebreak
+set ignorecase
 set scrolloff=8
 set sidescrolloff=8
 set clipboard=unnamedplus
 set mouse=a
 vnoremap <silent> y "+y
+let NERDTreeShowHidden=1
 
 " Performance
 set lazyredraw
 set ttyfast
-
-" Key Mappings
-let mapleader = ","
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
 
 " Load additional settings
 source ~/.vim/coc.vim
