@@ -8,11 +8,12 @@ endif
 " Plugins
 call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-sensible'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-commentary'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'lambdalisue/vim-fern'
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
-    Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'github/copilot.vim'
     Plug 'lervag/vimtex'
