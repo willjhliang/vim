@@ -12,14 +12,12 @@ This setup transforms vim from a simple text editor into my go-to IDE. Key featu
    git clone https://github.com/willjhliang/vim.git .vim
    ln -s .vim/init.vim .vimrc
    ```
-2. Install nodejs for the language-related features ([coc.nvim](https://github.com/neoclide/coc.nvim)),
-   ```
-   curl -sL install-node.vercel.app/lts | bash
-   ```
+2. [Install nodejs](https://nodejs.org/en/download) for the language-related features ([coc.nvim](https://github.com/neoclide/coc.nvim)) and LLM autocomplete ([copilot.vim](https://github.com/github/copilot.vim)).
 3. Open vim, which will automatically install the plugin manager ([vim-plug](https://github.com/junegunn/vim-plug)) and plugins,
    ```
    vim
    ```
+4. To use Copilot, login with `:Copilot setup`.
 
 ## Usage
 TODO
