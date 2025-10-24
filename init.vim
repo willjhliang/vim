@@ -44,6 +44,21 @@ set clipboard=unnamedplus
 set mouse=a
 vnoremap <silent> y "+y
 
+" Status Line
+set laststatus=2
+set statusline=
+set statusline+=%#StatusLine#        " Use active highlight
+set statusline+=\ %f                 " File name (relative)
+set statusline+=\ %m                 " Modified flag [+]
+set statusline+=\ %r                 " Readonly flag [RO]
+set statusline+=\ %y                 " Filetype
+set statusline+=%=
+set statusline+=%#StatusLine#        " Switch to right-aligned section
+set statusline+=%{&fileencoding?&fileencoding:&encoding}  " Encoding
+set statusline+=\ [%{&fileformat}]   " File format (unix/dos)
+set statusline+=\ %p%%               " File progress %
+set statusline+=\ %l:%c              " Line and column
+
 " Navigation
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
